@@ -16,20 +16,27 @@ public class CarroPersistency {
         return dao.all();
     }
 
-    public boolean insert(Carro c) {
-        return dao.insert(c);
+    public void insert(Carro c) {
+        dao.insert(c);
+    }
+
+    public void delete(int codigo) {
+        dao.delete(codigo);
     }
 
     public List<Carro> findByAno(int ano) {
         return dao.findByAno(ano);
     }
 
-    public Carro findById(int id) {
-        return dao.findById(id);
-    }
-
     public List<Carro> findByMarca(String marca) {
         return dao.findByMarca(marca);
     }
 
+    public List<Carro> findByAnoDeAte(int de, int ate) {
+        return dao.findByAnoDeAte(de, ate);
+    }
+
+    public void updateModelo(int codigo, Carro c) {
+        dao.updateModelo(codigo, c);
+    }
 }

@@ -2,27 +2,28 @@ package bean;
 
 public class Carro {
 
-    private int id;
+    private int codigo;
     private String marca;
     private int ano;
-    private String placa;
-
-    public Carro(int id, String marca, int ano, String placa) {
-        this.id = id;
-        this.marca = marca;
-        this.ano = ano;
-        this.placa = placa;
-    }
+    private int modelo;
+    private String fabricante;
+    private String nome;
+    private String chassi;
 
     public Carro() {
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public String toString() {
+        return "Carro{" + "codigo=" + codigo + ", marca=" + marca + ", ano=" + ano + ", modelo=" + modelo + ", fabricante=" + fabricante + ", nome=" + nome + ", chassi=" + chassi + '}';
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getMarca() {
@@ -41,16 +42,37 @@ public class Carro {
         this.ano = ano;
     }
 
-    public String getPlaca() {
-        return placa;
+    public int getModelo() {
+        return modelo;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setModelo(int modelo) {
+        this.modelo = modelo;
     }
 
-    @Override
-    public String toString() {
-        return "Carro{" + "id=" + id + ", marca=" + marca + ", ano=" + ano + ", placa=" + placa + '}';
+    public String getFabricante() {
+        return fabricante;
     }
+
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getChassi() {
+        return chassi;
+    }
+
+    public void setChassi(String chassi) {
+        this.chassi = chassi;
+    }
+    
+    
 }
