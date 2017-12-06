@@ -12,5 +12,7 @@ public class Main {
         TituloPersistency t = new TituloPersistency();
         
         //TODO: Testar o funcionamento das classes
+        
+        System.out.println("O repositório desse projeto se encontra em https://github.com/paesjoaopaulo/aps-p3. Confira!");
     }
 }
