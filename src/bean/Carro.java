@@ -20,7 +20,9 @@ public class Carro {
         this.chassi = chassi;
     }
 
-    public Carro() {
+    @Override
+    public String toString() {
+        return "Carro{" + "codigo=" + codigo + ", marca=" + marca + ", ano=" + ano + ", modelo=" + modelo + ", fabricante=" + fabricante + ", nome=" + nome + ", chassi=" + chassi + '}';
     }
 
     public int getCodigo() {

@@ -11,10 +11,9 @@ import java.util.List;
 
 public class CarroDAO {
 
-    private final Connection conn;
+    private Connection conn;
 
     public CarroDAO() {
-        this.conn = Conexao.getConnection();
     }
 
     public void insert(Carro c) {
@@ -61,6 +60,7 @@ public class CarroDAO {
     }
 
     public List<Carro> findByMarca(String marca) {
+        this.conn = Conexao.getConnection();
         List<Carro> ls = new ArrayList<>();
         String sql = "SELECT * FROM carros WHERE marca like ?";
         PreparedStatement st;
@@ -76,6 +76,7 @@ public class CarroDAO {
     }
 
     public List<Carro> all() {
+        this.conn = Conexao.getConnection();
         List<Carro> ls = new ArrayList<>();
         String sql = "SELECT * FROM carros";
         PreparedStatement st;
